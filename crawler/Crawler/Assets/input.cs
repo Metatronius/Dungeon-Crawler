@@ -4,12 +4,6 @@ using UnityEngine;
 
 public class input : MonoBehaviour {
     char direction = 's';
-    // Use this for initialization
-    void Start () {
-
-    }
-
-    // Update is called once per frame
     void Update () {
 		if(Input.GetKeyDown (KeyCode.LeftArrow)) //left
         {
