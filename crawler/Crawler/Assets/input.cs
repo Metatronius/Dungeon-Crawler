@@ -5,7 +5,7 @@ using UnityEngine;
 public class input : MonoBehaviour {
     char direction = 's';
     void Update () {
-		if(Input.GetKeyDown (KeyCode.LeftArrow)) //left
+		if(Input.GetKeyDown (KeyCode.RightArrow)) //left
         {
             switch(direction)
             {
@@ -27,7 +27,7 @@ public class input : MonoBehaviour {
                     break;
             }
         }
-        else if (Input.GetKeyDown(KeyCode.RightArrow))//right
+        else if (Input.GetKeyDown(KeyCode.LeftArrow))//right
         {
             switch (direction)
             {
