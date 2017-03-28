@@ -2,10 +2,30 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class input : MonoBehaviour {
+public class input : MonoBehaviour
+{
+    
     char direction = 's';
-    void Update () {
-		if(Input.GetKeyDown (KeyCode.RightArrow)) //left
+    /* 13(x) by 11(y) */
+    short[,] map = new short[,] {
+        { 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0 },
+        { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
+        { 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0 },
+        { 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0 },
+        { 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0 },
+        { 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0 },
+        { 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0 },
+        { 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0 },
+        { 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0 },
+        { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
+        { 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0 },
+        { 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0 },
+        { 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0 }};
+    short x = 0;
+    short y = 5;
+    void Update ()
+    {
+		if(Input.GetKeyDown (KeyCode.RightArrow)) //right
         {
             switch(direction)
             {
@@ -27,7 +47,7 @@ public class input : MonoBehaviour {
                     break;
             }
         }
-        else if (Input.GetKeyDown(KeyCode.LeftArrow))//right
+        else if (Input.GetKeyDown(KeyCode.LeftArrow))//left
         {
             switch (direction)
             {
